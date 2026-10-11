@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Nikah Ceremony – Hadiuz Zama &amp; Khushnuda Aniq</title>
+<title>Wedding Celebrations – Hadiuz Zama &amp; Khushnuda Aniq</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Crimson+Pro:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
@@ -138,6 +138,29 @@ body{margin:0;background:var(--page);display:flex;justify-content:center;padding
 .music:not(.on)::after{content:"";position:absolute;width:26px;height:2px;background:currentColor;transform:rotate(-45deg);border-radius:2px}
 @keyframes eq{from{height:25%}to{height:100%}}
 @media (prefers-reduced-motion:reduce){.music.on .bars i{animation:none;height:70%}}
+
+/* ---------- Events timeline ---------- */
+.tl{display:grid;gap:calc(var(--k)*4.5cqw);margin:3.5cqw auto 0;width:100%;text-align:left}
+.ev{position:relative;display:grid;grid-template-columns:calc(var(--k)*12cqw) 1fr;gap:calc(var(--k)*3.2cqw);align-items:start;
+  animation:rise 1s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(2.6s + var(--n)*.4s)}
+.ev:not(:last-child)::before{content:"";position:absolute;left:calc(var(--k)*6cqw);top:calc(var(--k)*12cqw);bottom:calc(var(--k)*-4.5cqw);width:1px;background:var(--gold);opacity:.7}
+.bd{width:calc(var(--k)*12cqw);aspect-ratio:1;border-radius:50%;background:var(--olive);color:#f4efe2;border:1.5px solid var(--gold);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  animation:pop .8s cubic-bezier(.34,1.56,.64,1) both;animation-delay:calc(2.6s + var(--n)*.4s)}
+.ev.main .bd{background:var(--ink)}
+.bd b{font:700 calc(var(--k)*4.6cqw)/1 "Cormorant Garamond",Georgia,serif}
+.bd span{font-size:max(9px,calc(var(--k)*1.9cqw));letter-spacing:.14em;text-transform:uppercase;margin-top:.4cqw}
+.ev h3{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:calc(var(--k)*4.2cqw);line-height:1.1}
+.ev .day{font-size:max(11px,calc(var(--k)*2.3cqw));letter-spacing:.06em;text-transform:uppercase;margin-top:.6cqw}
+.ev .meta{display:flex;gap:1.6cqw;align-items:flex-start;font-size:max(13px,calc(var(--k)*2.6cqw));line-height:1.35;margin-top:1.2cqw}
+.ev .sub{margin-top:2.2cqw}
+.ev.main .meta{margin-top:2.2cqw}
+.ev.main .meta+.meta{margin-top:1.6cqw}
+.ev.main a{margin-top:2.2cqw}
+.ev .soon{font-size:max(12px,calc(var(--k)*2.4cqw));font-style:italic;margin-top:1.2cqw;opacity:.85}
+.mi{flex:none;width:calc(var(--k)*3cqw);min-width:15px;aspect-ratio:1;margin-top:.2em;fill:none;stroke:var(--olive);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tag{display:inline-block;margin-top:1.4cqw;padding:.25em .8em;border:1px solid var(--gold);border-radius:99px;font-size:max(10px,calc(var(--k)*2cqw));letter-spacing:.1em;text-transform:uppercase;background:rgba(195,164,106,.15)}
+.ev a{display:inline-block;margin-top:1cqw;color:inherit;text-decoration-color:var(--gold);text-underline-offset:3px;font-size:max(11px,calc(var(--k)*2.2cqw))}
 </style>
 </head>
 <body>
@@ -173,18 +196,13 @@ body{margin:0;background:var(--page);display:flex;justify-content:center;padding
 
   <div class="frame">
     <svg class="shape" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-      <path id="p" d="M14 9C14-2.3 86-2.3 86 9Q86 14 100 14L100 86Q86 86 86 91C86 102.3 14 102.3 14 91Q14 86 0 86L0 14Q14 14 14 9Z" fill="#f7f0e4" stroke="#fffaf0" stroke-width="5" vector-effect="non-scaling-stroke" stroke-opacity=".85"/>
+      <path d="M14 9C14-2.3 86-2.3 86 9Q86 14 100 14L100 86Q86 86 86 91C86 102.3 14 102.3 14 91Q14 86 0 86L0 14Q14 14 14 9Z" fill="#f7f0e4" stroke="#fffaf0" stroke-width="5" vector-effect="non-scaling-stroke" stroke-opacity=".85"/>
       <path d="M14 9C14-2.3 86-2.3 86 9Q86 14 100 14L100 86Q86 86 86 91C86 102.3 14 102.3 14 91Q14 86 0 86L0 14Q14 14 14 9Z" fill="none" stroke="#c3a46a" stroke-width="1.3" vector-effect="non-scaling-stroke"/>
     </svg>
 
     <p class="greet">ASSALAAMUALAIKUM</p>
     <div class="rule" style="width:34%"><i></i></div>
-    <p class="intro">It’s with immense joy and gratitude that we invite you to</p>
-    <div class="rule"><i></i></div>
-
-    <p class="join">Join us for the</p>
-    <h1 class="title">NIKAH CEREMONY</h1>
-    <div class="rule" style="width:30%;margin-bottom:0"><i></i></div>
+    <p class="intro">It’s with immense joy and gratitude<br>that we invite you to celebrate<br>the wedding of</p>
 
     <h2 class="name">Hadiuz Zama</h2>
     <p class="parents">(Son of Late Abdul Ali &amp; Sultana Bano)</p>
@@ -192,25 +210,30 @@ body{margin:0;background:var(--page);display:flex;justify-content:center;padding
     <h2 class="name" style="margin-top:0">Khushnuda Aniq</h2>
     <p class="parents">(Daughter of Sayed Abdussalam &amp; Saba Salam)</p>
 
-    <dl class="details" style="margin-bottom:0">
-      <div class="row">
-        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></svg></div>
-        <div class="sep"></div>
-        <div><dt>Date:</dt><dd>1st December 2026</dd></div>
-      </div>
-      <div class="row">
-        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg></div>
-        <div class="sep"></div>
-        <div><dt>Time:</dt><dd>8:00 PM</dd></div>
-      </div>
-      <div class="row">
-        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0113 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></div>
-        <div class="sep"></div>
-        <div><dt>Venue:</dt><dd>Kalyan Mandap,<br>Rajgangpur, Odisha</dd></div>
-      </div>
-    </dl>
-
     <div class="rule" style="margin-top:3.5cqw"><i></i></div>
+    <p class="join">Save the dates</p>
+    <h1 class="title">WEDDING EVENTS</h1>
+
+    <div class="tl">
+      <div class="ev" style="--n:0">
+        <div class="bd"><b>29</b><span>Nov</span></div>
+        <div><h3>Haldi</h3><div class="day">Sunday, 29th November 2026</div><span class="tag">Groom’s side</span><div class="meta"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg><span>2:00 PM</span></div><div class="meta"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0113 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg><span>Ranchi</span></div><div class="sub"><span class="tag">Bride’s side</span><div class="meta"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg><span>3:00 PM</span></div><div class="meta"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0113 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg><span>Rajgangpur, Odisha</span></div></div></div>
+      </div>
+      <div class="ev" style="--n:1">
+        <div class="bd"><b>30</b><span>Nov</span></div>
+        <div><h3>Mehndi</h3><div class="day">Monday, 30th November 2026</div><span class="tag">Bride’s side</span><div class="meta"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg><span>3:00 PM</span></div><div class="meta"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0113 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg><span>Rajgangpur, Odisha</span></div></div>
+      </div>
+      <div class="ev main" style="--n:2">
+        <div class="bd"><b>01</b><span>Dec</span></div>
+        <div><h3>Nikah Ceremony</h3><div class="day">Tuesday, 1st December 2026</div><div class="meta"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg><span>8:00 PM</span></div><div class="meta"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0113 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg><span>Kalyan Mandap, Rajgangpur, Odisha</span></div><a href="https://www.google.com/maps/search/?api=1&amp;query=Kalyan+Mandap+Rajgangpur+Odisha" target="_blank" rel="noopener">View on map</a></div>
+      </div>
+      <div class="ev main" style="--n:3">
+        <div class="bd"><b>04</b><span>Dec</span></div>
+        <div><h3>Walima Ceremony</h3><div class="day">Friday, 4th December 2026</div><div class="meta"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg><span>8:00 PM</span></div><div class="meta"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0113 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg><span>Dawat Palace, Manitola, Ranchi</span></div><a href="https://www.google.com/maps/search/?api=1&amp;query=Dawat+Palace+Manitola+Ranchi" target="_blank" rel="noopener">View on map</a></div>
+      </div>
+    </div>
+
+    <div class="rule" style="margin-top:4.5cqw"><i></i></div>
     <p class="close">Your presence and blessings will make our celebration truly special.</p>
     <div class="rule" style="width:50%;margin-bottom:0"><i></i></div>
   </div>
